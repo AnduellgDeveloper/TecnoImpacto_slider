@@ -1,0 +1,110 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    max-width: 1200px;
+    max-height: 800px;
+    margin: 0 auto;
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+
+    /* Degradado con colores suaves */
+    background: linear-gradient(45deg, #777575, #9b9999, #4dd753, #6ae814);
+
+    /* Tienes el tamaño del degradado al 300% para que se mueva más fluido */
+    background-size: 300% 300%;
+
+    /* Animación suave del fondo */
+    animation: gradientAnimation 8s infinite alternate;
+}
+
+/* Definición de la animación */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Estilos para las barras deslizantes */
+.scroll-bar-top {
+    width: 100%;
+    overflow: hidden;
+    background-color: #000000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+/*.scroll-content {
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    margin-top: 5px;
+    display: flex;
+    user-select: none;
+    pointer-events: none;
+    animation: scroll 150s linear infinite;
+    margin-left: 3000px;
+}
+*/
+
+
+.category {
+    padding: 10px 20px;
+    white-space: nowrap;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+/* Animación para el desplazamiento automático */
+/*@keyframes scroll {
+    0% { transform: translateX(35%); }
+    100% { transform: translateX(-100%); }
+}
+*/
+
+
+/* Barra superior e inferior */
+.top-bar {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+/* Estilos del slider principal */
+.slider {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 650px;
+    max-height: 550px;
+    margin: 0 auto;
+}
+/* Animación de cambiar*/
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+

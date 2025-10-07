@@ -1,0 +1,89 @@
+/* Estilos del slider principal */
+.carousel {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Asegura que no haya desbordamientos */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 550px;
+    max-height: 550px; /* Cambiar el alto máximo según tus necesidades */
+    margin: 0 auto;
+}
+
+/* Contenedor de las imágenes */
+.carousel-images {
+    display: flex;
+    transition: transform 4s ease;
+    height: 100%; /* Asegura que el contenedor ocupe toda la altura disponible */
+}
+
+/* Videos en el slider */
+.carousel-images video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       /* Ocupa todo el espacio y recorta los lados si es necesario */
+    object-position: center; /* Centra el video en el contenedor */
+    display: block;
+    margin: 0;
+    background-color: #000;  /* Fondo negro para que no se vean franjas raras */
+}
+
+/* Imagen en el slider */
+.carousel-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Asegura que la imagen se ajuste sin cortarse */
+    display: block;
+    margin: 0; /* Eliminar márgenes adicionales */
+}
+
+/* Asegurarse de que la imagen quede centrada */
+.carousel-images img {
+    object-position: center center; /* Centra la imagen dentro del contenedor */
+}
+
+/* Botones del slider */
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+/* Estilo de los botones */
+.carousel-button {
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Efecto de opacidad para la imagen activa */
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Cambiar a contain para evitar que la imagen se corte */
+    object-position: center center; /* Centrado correcto de la imagen */
+    background-color: #f4f1e9; /* Color de fondo del contenedor de la imagen */
+    display: block;
+    margin: 0;
+}
+
+/* Cargar imágenes de forma diferida */
+.lazy-load {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.lazy-load.loaded {
+    opacity: 1;
+}
