@@ -155,6 +155,14 @@ body {
 }
 
 
+.filters-panel {
+  width: 260px;
+  padding: 30px;
+  background: white;
+  border-right: 1px solid #eee;
+}
+
+/* SOLO EN MÓVIL */
 @media (max-width: 768px) {
   .filters-panel {
     position: fixed;
@@ -163,5 +171,13 @@ body {
     height: 100%;
     z-index: 1000;
     transition: left 0.3s ease;
+  }
+
+  .filters-panel.active {
+    left: 0;
+  }
+
+  .menu-btn {
+    display: block;
   }
 }

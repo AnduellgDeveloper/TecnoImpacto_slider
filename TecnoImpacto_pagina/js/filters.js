@@ -1,4 +1,27 @@
 const checkboxes = document.querySelectorAll("input[type=checkbox]");
+const menuBtn = document.getElementById("menuBtn");
+const filtersPanel = document.getElementById("filtersPanel");
+
+// Evento y animacion del boton de menu
+menuBtn.addEventListener("click", () => {
+  filtersPanel.classList.toggle("active");
+});
+
+menuBtn.addEventListener("click", () => {
+  filtersPanel.classList.toggle("active");
+  menuBtn.textContent = filtersPanel.classList.contains("active") ? "✖" : "☰";
+});
+
+document.addEventListener("click", (e) => {
+  if (
+    filtersPanel.classList.contains("active") &&
+    !filtersPanel.contains(e.target) &&
+    !menuBtn.contains(e.target)
+  ) {
+    filtersPanel.classList.remove("active");
+    menuBtn.textContent = "☰";
+  }
+});
 
 checkboxes.forEach(cb => {
   cb.addEventListener("change", applyFilters);
