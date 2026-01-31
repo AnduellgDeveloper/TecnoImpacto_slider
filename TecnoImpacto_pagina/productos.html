@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gorras</title>
+  <link rel="stylesheet" href="css/productos.css">
+  <link rel="stylesheet" href="css/menu_admin.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header class="top-bar">
+  <button class="menu-btn" onclick="toggleFilters()">☰</button>
+  <h1>GORRAS</h1>
+</header>
+
+<div class="layout">
+
+  <!-- MENÚ LATERAL -->
+  <aside class="filters-panel" id="filtersPanel">
+    <h3>FILTRAR</h3>
+
+    <div class="filter-group">
+      <h4>Color</h4>
+      <label><input type="checkbox" value="blanco" class="filter-color"> Blanco</label>
+      <label><input type="checkbox" value="beige" class="filter-color"> Beige</label>
+    </div>
+
+    <div class="filter-group">
+      <h4>Marca</h4>
+      <label><input type="checkbox" value="New Era" class="filter-marca"> New Era</label>
+    </div>
+
+    <div class="filter-group">
+      <h4>Equipo</h4>
+      <label><input type="checkbox" value="Dodgers" class="filter-equipo"> Dodgers</label>
+    </div>
+  </aside>
+
+  <!-- PRODUCTOS -->
+  <main class="products" id="productList"></main>
+
+</div>
+
+<script src="js/data_productos.js"></script>
+<script src="js/filters.js"></script>
+</body>
+</html>

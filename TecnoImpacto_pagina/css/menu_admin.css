@@ -1,0 +1,12 @@
+.menu-btn {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+}
