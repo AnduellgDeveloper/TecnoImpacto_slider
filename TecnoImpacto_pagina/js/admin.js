@@ -1,8 +1,8 @@
-if (localStorage.getItem("auth") !== "true") {
-  window.location.href = "login.html";
+if (localStorage.getItem("isAdmin") !== "true") {
+  window.location.href = "/TecnoImpacto_pagina/htmls/login.html";
 }
 document.getElementById("adminBtn").addEventListener("click", () => {
-  window.location.href = "login.html";
+  window.location.href = "/TecnoImpacto_pagina/htmls/login.html";
 });
 
 

@@ -9,7 +9,8 @@ function login() {
 
   if (user === "admin" && pass === "7777") {
     localStorage.setItem("isAdmin", "true");
-    window.location.href = "admin.html";
+    alert("Admin detectado");
+    window.location.href = "/TecnoImpacto_pagina/htmls/admin.html";
   } else {
     alert("Usuario o contraseña incorrectos");
   }

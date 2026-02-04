@@ -6,7 +6,7 @@ let products = JSON.parse(localStorage.getItem("products")) || [
     marca: "New Era",
     equipo: "Dodgers",
     tipo: "gorra",
-    image: "images/Relojs/Reloj-9.webp"
+    image: "../images/Relojs/Reloj-9.webp"
   }
 ];
 

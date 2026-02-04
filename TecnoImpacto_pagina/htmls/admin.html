@@ -1,24 +1,40 @@
-<script>
-  if (localStorage.getItem("isAdmin") !== "true") {
-    window.location.href = "htmls/login.html";
-  }
-</script>
-<h2>Agregar Producto</h2>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin</title>
 
-<input id="name" placeholder="Nombre">
-<input id="color" placeholder="Color">
-<input id="marca" placeholder="Marca">
-<input id="tipo" placeholder="Tipo">
-<input id="image" placeholder="Ruta imagen">
-<button onclick="addProduct()">Guardar</button>
-<button onclick="logout()">Cerrar sesión</button>
+  <!-- PROTECCIÓN DEL ADMIN -->
+  <script>
+    if (localStorage.getItem("isAdmin") !== "true") {
+      window.location.href = "/TecnoImpacto_pagina/htmls/login.html";
+    }
+  </script>
 
-<script>
-function logout() {
-  localStorage.removeItem("isAdmin");
-  window.location.href = "htmls/index.html";
-}
-</script>
+  <link rel="stylesheet" href="../css/menu_admin.css">
+</head>
 
+<body>
 
-<script src="js/admin.js"></script>
+  <h2>Agregar Producto</h2>
+
+  <input id="name" placeholder="Nombre">
+  <input id="color" placeholder="Color">
+  <input id="marca" placeholder="Marca">
+  <input id="tipo" placeholder="Tipo">
+  <input id="image" placeholder="Ruta imagen">
+
+  <button onclick="addProduct()">Guardar</button>
+  <button onclick="logout()">Cerrar sesión</button>
+
+  <script>
+    function logout() {
+      localStorage.removeItem("isAdmin");
+      window.location.href = "/TecnoImpacto_pagina/htmls/login.html";
+    }
+  </script>
+
+  <script src="../js/admin.js"></script>
+
+</body>
+</html>
