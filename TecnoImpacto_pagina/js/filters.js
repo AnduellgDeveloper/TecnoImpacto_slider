@@ -1,6 +1,15 @@
 const checkboxes = document.querySelectorAll("input[type=checkbox]");
 const menuBtn = document.getElementById("menuBtn");
+const closeBtn = document.getElementById("closeBtn");
 const filtersPanel = document.getElementById("filtersPanel");
+
+function toggleFilters() {
+  filtersPanel.classList.toggle("active");
+}
+
+menuBtn.addEventListener("click", toggleFilters);
+closeBtn.addEventListener("click", toggleFilters);
+
 
 // Evento y animacion del boton de menu
 menuBtn.addEventListener("click", () => {
@@ -11,6 +20,8 @@ menuBtn.addEventListener("click", () => {
   filtersPanel.classList.toggle("active");
   menuBtn.textContent = filtersPanel.classList.contains("active") ? "✖" : "☰";
 });
+
+// Cerrar el panel al hacer clic fuera de él
 
 document.addEventListener("click", (e) => {
   if (

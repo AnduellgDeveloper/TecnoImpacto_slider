@@ -1,6 +1,10 @@
 if (localStorage.getItem("auth") !== "true") {
   window.location.href = "login.html";
 }
+document.getElementById("adminBtn").addEventListener("click", () => {
+  window.location.href = "login.html";
+});
+
 
 function addProduct() {
   const product = {
