@@ -7,16 +7,19 @@ document.getElementById("adminBtn").addEventListener("click", () => {
 
 
 function addProduct() {
-  const product = {
-    id: Date.now(),
+  const products = getProducts();
+  const product = {  
+  id: Date.now(),
     name: name.value,
     color: color.value,
     marca: marca.value,
+    equipo: equipo.value,
     tipo: tipo.value,
+    stock: stock.value,
     image: image.value
   };
 
   products.push(product);
-  localStorage.setItem("products", JSON.stringify(products));
+  saveProducts(products);
   alert("Producto agregado");
 }
